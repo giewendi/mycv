@@ -1,0 +1,220 @@
+<div class="wraper">
+  <div class="container">
+    <div class="left-content p-30">
+      <div class="logo">
+        <a href="index.html">
+          <span>&lt;My CV/</span>
+          <span>Resume&gt;</span>
+        </a>
+      </div>
+      <div class="nav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#achievements">Achievements</a></li>
+          <li><a href="#references">References</a></li>
+        </ul>
+      </div>
+      <div class="left-footer">
+        <div class="social-icons">
+          <ul>
+            <li>
+              <a href="#" target="_blank"
+                ><i class="fa fa-linkedin-square" aria-hidden="true"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/giewen.pinlac" target="_blank"
+                ><i class="fa fa-facebook" aria-hidden="true"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"
+                ><i class="fa fa-twitter" aria-hidden="true"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/giewenpinlac/" target="_blank"
+                ><i class="fa fa-instagram" aria-hidden="true"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <div class="foot-contact">
+          <ul>
+            <li>{{ email }}</li>
+            <li>{{ phone }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="main-content">
+      <div class="section1 p-30" id="home">
+        <div class="sec-title">
+          <div class="pg-sub-title" [class]="appliedCSSClass">Home</div>
+          <hr />
+          <div class="pg-title">console.log("Hello, World!");</div>
+        </div>
+        <div class="d-flex-align-center">
+          <div class="user-img flex-1">
+            <img
+              src="https://getservice.tech/wp-content/uploads/2022/11/IMG_3497.jpg"
+            />
+          </div>
+          <div class="user-profile flex-1">
+            <div class="pro-details">
+              <div class="sm-text">my.nameis();</div>
+              <div class="name">{{ name }}</div>
+              <div class="role">{{ major }}</div>
+            </div>
+            <div class="text">
+              In here, you will see my current professional career. This
+              includes my Education, Achievements, Skills, and Work Experience.
+            </div>
+            <div class="pr-list">
+              <ul>
+                <li>
+                  <i class="fa fa-calendar" aria-hidden="true"></i> 23rd
+                  January, 2023
+                </li>
+                <li>
+                  <i class="fa fa-phone" aria-hidden="true"></i> {{ phone }}
+                </li>
+                <li>
+                  <i class="fa fa-envelope" aria-hidden="true"></i>
+                  {{ email }}
+                </li>
+                <li>
+                  <i class="fa fa-map-marker" aria-hidden="true"></i> Angeles
+                  City, Pampanga
+                </li>
+              </ul>
+            </div>
+            <div class="social-icons-head">
+              <ul>
+                <li>
+                  <a href="#" target="_blank"
+                    ><i class="fa fa-linkedin-square" aria-hidden="true"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.facebook.com/giewen.pinlac"
+                    target="_blank"
+                    ><i class="fa fa-facebook" aria-hidden="true"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#" target="_blank"
+                    ><i class="fa fa-twitter" aria-hidden="true"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.instagram.com/giewenpinlac/"
+                    target="_blank"
+                    ><i class="fa fa-instagram" aria-hidden="true"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <app-about id="about"></app-about>
+
+        <app-education id="education"></app-education>
+
+        <app-skills id="skills"></app-skills>
+
+        <app-achievements id="achievements"></app-achievements>
+
+        <app-references id="references"></app-references>
+
+        <div
+          class="pg-sub-title"
+          [class]="appliedCSSClass"
+          style="margin-top:5em;"
+        >
+          Write me a message
+        </div>
+        <hr />
+        <div class="container2" [style.background-color]="formColor">
+          <form action="/action_page.php">
+            <div class="row">
+              <div class="col-25">
+                <label for="fname" [class]="notappliedCSSClass"
+                  >First Name</label
+                >
+              </div>
+              <div class="col-75">
+                <input
+                  type="text"
+                  id="fname"
+                  name="firstname"
+                  placeholder="Your name.."
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="lname" [class]="notappliedCSSClass"
+                  >Last Name</label
+                >
+              </div>
+              <div class="col-75">
+                <input
+                  type="text"
+                  id="lname"
+                  name="lastname"
+                  placeholder="Your last name.."
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="country" [class]="notappliedCSSClass"
+                  >Country</label
+                >
+              </div>
+              <div class="col-75">
+                <select id="country" name="country">
+                  <option [value]="country1">Philippines</option>
+                  <option [value]="country2">USA</option>
+                  <option [value]="country3">Australia</option>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="subject" [class]="notappliedCSSClass"
+                  >Subject</label
+                >
+              </div>
+              <div class="col-75">
+                <textarea
+                  id="subject"
+                  name="subject"
+                  [placeholder]="comment"
+                  style="height:200px"
+                ></textarea>
+              </div>
+            </div>
+            <br />
+            <div class="row">
+              <input
+                [style.background-color]="buttonColor"
+                type="submit"
+                value="Submit"
+                (click)="showData($event)"
+              />
+            </div>
+          </form>
+        </div>
+        <p class="m-20" style="font-size: 20px;">end;</p>
+      </div>
+    </div>
+  </div>
+</div>
